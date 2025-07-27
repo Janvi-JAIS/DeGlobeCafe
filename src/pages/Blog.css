@@ -1,0 +1,43 @@
+.blog-container {
+  padding: 2rem;
+  background-color: #f5f0e6;
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+}
+
+.blog-heading {
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-weight: bold;
+  color: #3B2F2F;
+  margin-bottom: 2rem;
+}
+
+.blog-post {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #C49E78;
+}
+
+.blog-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #3B2F2F;
+}
+
+.blog-date {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.blog-content {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+}

@@ -1,0 +1,59 @@
+.menu-container {
+  padding: 2rem;
+  background-color: #f5f0e6; /* cream */
+  font-family: 'Lato', sans-serif;
+}
+
+.menu-heading {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: #3B2F2F; /* espresso */
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.menu-card {
+  background-color: white;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.menu-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #3B2F2F;
+}
+
+.menu-description {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  color: #444;
+}
+
+.menu-price {
+  color: #C49E78; /* caramel */
+  font-weight: bold;
+  font-size: 1rem;
+}
