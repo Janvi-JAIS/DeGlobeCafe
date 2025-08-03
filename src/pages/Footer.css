@@ -1,0 +1,18 @@
+.footer {
+  background-color: #3B2F2F;
+  color: #f5f0e6;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-family: 'Lato', sans-serif;
+  margin-top: 2rem;
+}
+
+.footer-content h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.3rem;
+}
+
+.footer-content p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}

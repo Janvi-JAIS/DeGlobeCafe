@@ -31,3 +31,21 @@
 .nav-link.active {
   color: #C49E78;
 }
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .nav-link {
+    padding-left: 0.5rem;
+  }
+}

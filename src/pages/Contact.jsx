@@ -4,20 +4,47 @@ import "./Contact.css";
 const Contact = () => {
   return (
     <div className="contact-container">
-      <h1 className="contact-heading">Get in Touch</h1>
-      <div className="contact-box">
-        <form>
-          <label className="contact-label">Name</label>
-          <input type="text" className="contact-input" placeholder="Your Name" />
+      <h2 className="contact-title">Get in Touch</h2>
 
-          <label className="contact-label">Email</label>
-          <input type="email" className="contact-input" placeholder="you@example.com" />
+      <div className="contact-wrapper">
+        <form className="contact-form">
+          <label>
+            Name:
+            <input type="text" name="name" required />
+          </label>
 
-          <label className="contact-label">Message</label>
-          <textarea className="contact-input" rows="4" placeholder="Your message..." />
+          <label>
+            Email:
+            <input type="email" name="email" required />
+          </label>
 
-          <button type="submit" className="contact-button">Send Message</button>
+          <label>
+            Message:
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+
+          <button type="submit">Send Message</button>
         </form>
+
+        <div className="contact-info">
+          <h3>Contact Information</h3>
+          <p><strong>Address:</strong> 123 Brew Street, Lucknow, UP</p>
+          <p><strong>Phone:</strong> +91 98765 43210</p>
+          <p><strong>Email:</strong> info@deglobecafe.com</p>
+        </div>
+      </div>
+
+      {/* Google Map */}
+      <div className="map-container">
+        <iframe
+          title="De Globe Café Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.428738697094!2d80.9431336753249!3d26.852244876668996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be2a29a3424a3%3A0x2f26e332d0bdc87d!2sLucknow%20Cafe!5e0!3m2!1sen!2sin!4v1693141110298!5m2!1sen!2sin"
+          width="100%"
+          height="350"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+        ></iframe>
       </div>
     </div>
   );

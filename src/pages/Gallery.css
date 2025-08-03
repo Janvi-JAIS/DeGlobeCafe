@@ -71,3 +71,37 @@
   border-radius: 50%;
   z-index: 1000;
 }
+@media screen and (max-width: 768px) {
+  .menu-grid,
+  .blog-grid,
+  .gallery-grid,
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-card,
+  .blog-card,
+  .gallery-card,
+  .contact-form,
+  .contact-info {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .map-container iframe {
+    height: 250px;
+  }
+
+  .home-hero h1 {
+    font-size: 2rem;
+  }
+
+  .home-hero p {
+    font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 0.85rem;
+  }
+}

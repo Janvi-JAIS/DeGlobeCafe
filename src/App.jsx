@@ -8,6 +8,15 @@ import Gallery from "./pages/Gallery";
 import Story from "./pages/Story";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import Footer from "./pages/Footer";
+import Login from "./pages/Login";
+import ProtectedRoute from "./utils/ProtectedRoute";
+
+import Dashboard from "./admin/Dashboard";
+import MenuEditor from "./admin/MenuEditor";
+import BlogEditor from "./admin/BlogEditor";
+import GalleryEditor from "./admin/GalleryEditor";
+import Inquiries from "./admin/Inquiries";
 
 const App = () => {
   return (
@@ -20,7 +29,16 @@ const App = () => {
         <Route path="/story" element={<Story />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/admin" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+  <Route path="/admin/menu" element={<ProtectedRoute><MenuEditor /></ProtectedRoute>} />
+  <Route path="/admin/blog" element={<ProtectedRoute><BlogEditor /></ProtectedRoute>} />
+  <Route path="/admin/gallery" element={<ProtectedRoute><GalleryEditor /></ProtectedRoute>} />
+  <Route path="/admin/inquiries" element={<ProtectedRoute><Inquiries /></ProtectedRoute>} />
+        
       </Routes>
+      <Footer/>
     </>
   );
 };

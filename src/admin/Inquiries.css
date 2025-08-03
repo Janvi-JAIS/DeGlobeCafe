@@ -1,0 +1,59 @@
+.inquiries {
+  padding: 2rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.inquiry-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.inquiry-list li {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #fdfdfd;
+}
+
+.inquiry-list li.unread {
+  border-left: 4px solid #c49e78;
+  background-color: #fff8f2;
+}
+
+.inquiry-list li.read {
+  opacity: 0.7;
+}
+
+.inquiry-header {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.inquiry-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.inquiry-actions button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.inquiry-actions button:hover {
+  opacity: 0.9;
+}
+
+.inquiry-actions .delete {
+  background-color: #c92c2c;
+  color: white;
+}
+
+.inquiry-actions .delete:hover {
+  background-color: #a72020;
+}
