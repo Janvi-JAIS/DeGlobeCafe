@@ -1,0 +1,147 @@
+* { box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background: var(--bg); margin: 0;background-color: #000; color: #222; }
+.container { max-width: var(--max-width); margin: 0 auto; padding: 2rem; }
+
+.contact-page {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+
+/* Hero Section */
+.contact-hero {
+  
+  margin-top: 0;
+  margin-left: 30px;
+  margin-right: 30px;
+    background-image: url('https://deglobecafe.in/wp-content/uploads/2025/03/Free-Coffee-PPT-Background_-Illustrated-Border.jpg');
+  padding: 1rem;
+  padding-bottom: 5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+
+  position: relative;
+  text-align: center;
+  height: 250px;
+}
+
+.contact-hero h1 {
+ font-size: 2.5rem;
+margin-top: 1rem;
+  margin-bottom: 0.5rem;
+ color: #000;
+  
+}
+.contact-hero p {
+    font-size: 1.7rem;
+  margin-bottom: 1rem;
+ color: #000;
+}
+
+
+/* Image Gallery */
+.contact-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 10%;
+  background: #000;
+}
+.visit-section h2{
+  margin-top: 0;
+  padding-top: 0;
+ font-size: 3rem;
+ font-weight: 600;
+}
+.visit-section p {
+  font-size: 1.5rem;
+ margin-top: 0;
+
+}
+
+.gallery-item {
+  flex: 1 1 calc(33% - 20px);
+  min-width: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 1rem;
+background-image:linear-gradient(rgba(248, 212, 180, 0.6), rgba(248, 212, 180, 0.6)), url('https://deglobecafe.in/wp-content/uploads/2025/03/Free-Coffee-PPT-Background_-Illustrated-Border.jpg');
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.faq-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  margin-left: 20px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+/* Social Media Section */
+.social-media-section {
+  padding: 40px 10%;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.social-media-section h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.social-media-section p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+/* Closing Section */
+.closing-section {
+  padding: 40px 10%;
+  background: #f8d4b4;
+  color: #000;
+  text-align: center;
+}
+
+.closing-section h2 {
+  margin-bottom: 15px;
+}
+
+/* Map */
+.map-container {
+  margin-top: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+  .contact-gallery {
+    padding: 20px;
+  }
+  .gallery-item {
+    flex: 1 1 100%;
+  }
+}

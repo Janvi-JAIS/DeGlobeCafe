@@ -1,0 +1,403 @@
+:root {
+  --primary-color: #3B2F2F;
+  --secondary-color: #C49E78;
+  --light-color: #f8d4b4;
+  --text-color: #2b2b2b;
+}
+
+/* ===== General ===== */
+/* ===== Hero Section ===== */
+.hero {
+  background: #000; /* overall page background (black visible at sides) */
+ padding: 30px 0;
+}
+
+.hero-container {
+  max-width: 1200px;
+  background-image: linear-gradient(rgba(248, 212, 180, 0.9), rgba(248, 212, 180, 0.9)),
+  url('https://deglobecafe.in/wp-content/uploads/2025/03/Wooden-Spoons-PNG-Transparent-Wooden-Spoon-e1742236255737.png');
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+ 
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  /* gap: 40px; */
+   padding: 30px 60px; 
+   padding-top: 5px;
+   margin-top: 1px; /* space above hero section */
+  margin-left: 40px;     /* more margin on left */
+  margin-right: 0px;
+}
+
+/* left text */
+.hero-text {
+  flex: 1;
+  padding-right: 30px;
+  color: #000;
+}
+.hero-text h4{
+  margin-top: 1px;
+  color: #000;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.hero-text h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #000;
+  margin-bottom: 25px;
+  max-width: 500px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background: rgb(247, 88, 30);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* right image */
+.hero-image {
+  display: flex;
+  size-adjust: contain;
+  max-width: 950px;
+  width: 110%;   /* intentionally a bit bigger than container */
+ 
+    flex: 1.2;   /* give more space than text side */
+  text-align: right;
+  position: relative;
+}
+
+.hero-image img {
+  max-width: 850px;   /* bigger image */
+  width: 130%;        /* a little larger than its container */
+  margin-right: -40px; /* push outside right edge */
+  margin-top: -20px;
+}
+
+
+
+/* ===== Quote Section ===== */
+.quote {
+  width: 100%;  
+          
+  background: none ;            
+  color: var(--light-color);
+  font-weight: 900;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1.6;
+
+  position: relative;
+  left: 0;
+  right: 0;
+}
+.about-us {
+  background: #0d0d0d; /* match site’s black theme */
+  padding: 4rem 2rem;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  height: 600px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  border: 10px solid #fff;
+}
+
+.about-text {
+  flex: 1;
+  color: #fff;
+}
+
+.about-text h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.about-text h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.about-text ul {
+  margin-bottom: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.about-text ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.about-content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+
+
+.about-text ul {
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+.about-text ul li {
+  list-style: disc;
+  margin-bottom: 0.5rem;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.learn-more-btn {
+  background: #f5b27a;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background: #ff9900;
+}
+
+.loved-sips {
+  text-align: center;
+  padding: 20px 20px;
+  /* background:var(--light-color);  */
+  background-image: url(https://deglobecafe.in/wp-content/uploads/2025/03/Free-Coffee-PPT-Background_-Illustrated-Border.jpg);
+  margin-left: 20px;
+  margin-right: 20px;
+    border-radius: 25px
+}
+
+.loved-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.loved-subtitle {
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
+.loved-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.loved-card {
+  background: #111;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+
+  max-width: 360px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.loved-card:hover {
+  transform: translateY(-10px);
+}
+
+.loved-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.loved-card h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.loved-card p {
+  font-size: 0.4rem;
+  color: #ccc;
+}
+
+
+/* ===== Gallery Preview ===== */
+.gallery-preview {
+  text-align: center;
+  color:#fff;
+}
+.gallery-preview h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.gallery-preview p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 2rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.experience-grid {
+  text-align: center;
+  background: #111; /* black background */
+  padding: 4rem 1rem;
+  color: #fff;
+}
+
+/* Grid container */
+.hex-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ gap: 0.2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Each row */
+.hex-row {
+  display: flex;
+  justify-content: center;
+ gap: -10px;
+}
+
+.hex-row.offset {
+  transform: translateX(10px); /* offset for honeycomb effect */
+}
+
+/* Hexagon shape */
+.hex {
+  width: 280px;
+  aspect-ratio: 1 / 1;
+  clip-path: polygon(
+      50% 0%, 
+    93% 25%, 
+    93% 75%, 
+    50% 100%, 
+    7% 75%, 
+    7% 25%
+  );
+  border-radius:25px;
+  overflow: hidden;
+  background:none;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.hex img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hex img:hover {
+  transform: scale(1.1); /* slightly bigger zoom */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hex {
+    width: 150px;
+  }
+  .hex-row.offset {
+    transform: translateX(25px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hex {
+    width: 120px;
+  }
+  .hex-row,
+  .hex-row.offset {
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: translateX(0);
+  }
+  .hex-row.offset {
+    margin-top: -10px; /* keep honeycomb vertical spacing */
+  }
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+  .hero-overlay h2 {
+    font-size: 1.4rem;
+  }
+}

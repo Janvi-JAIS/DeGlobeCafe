@@ -1,0 +1,216 @@
+/* Overall */
+.menu-page {
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #333;
+  background:#000;
+}
+
+.cravings-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: black;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: white ;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Cravings Carousel ---------- */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 2.75rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px; /* separation between cards */
+  will-change: transform;
+  align-items: stretch;
+}
+
+.cravings-card {
+  background:#f8d4b4;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left;
+  overflow: hidden;
+}
+
+.cravings-card img {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.cravings-card h3 {
+  margin: 10px 0 6px;
+  font-size: 1.05rem;
+  color: black;
+}
+
+.cravings-card p {
+  margin: 0;
+  color: #000;
+  font-size: 0.9rem;
+  line-height: 1.25;
+}
+
+/* Arrow Buttons */
+.arrow-btn {
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(255, 102, 0, 0.14);
+  z-index: 10;
+}
+
+.arrow-btn.left {
+  margin-right: 12px;
+}
+
+.arrow-btn.right {
+  margin-left: 12px;
+}
+
+.arrow-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: scale(0.98);
+}
+
+/* ---------- Explore Menu (two-column) ---------- */
+.text-menu-section {
+  padding: 2rem 1rem 4rem;
+  background:#f8d4b4;
+}
+
+.text-menu-section .section-title {
+  color: #000;
+  text-decoration:underline ;
+ 
+}
+
+.text-menu-section .section-subtitle{
+  color: #000;
+  margin-bottom: 5rem ;
+}
+
+.menu-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.25rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.text-menu-category h2 {
+  color: #000;
+  margin: 0 0 0.4rem;
+  font-size: 1.15rem;
+}
+
+.text-menu-category hr {
+  border: none;
+  height: 1px;
+  background: #eee;
+  margin: 0 0 0.75rem;
+}
+
+.text-menu-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.item-left h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.item-left p {
+  margin: 6px 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.item-price {
+  font-weight: 500;
+  color: #ff6600;
+  min-width: 60px;
+  text-align: right;
+}
+.best-sellers {
+  background-color: #000;
+  color: #fff;
+  margin-top: 5rem ;
+  margin-bottom: 15rem;
+  
+  text-align: center;
+ 
+}
+
+.best-sellers h1{
+  
+  font-size: 4rem;
+  font-weight: 700;
+}
+.best-sellers p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+/* Responsive */
+@media (max-width: 992px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .carousel-wrapper {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    padding: 0 0.75rem;
+  }
+  .cravings-card img {
+    height: 160px;
+  }
+}
