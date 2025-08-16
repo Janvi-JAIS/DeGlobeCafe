@@ -1,0 +1,162 @@
+:root {
+  --accent: #e3b17d;
+  --bg: #faf6f1;
+  --muted: #5a5a5a;
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background: var(--bg); margin: 0;background-color: #000; color: #222; }
+.container { max-width: var(--max-width); margin: 0 auto; padding: 2rem; }
+
+
+
+.about-card {
+  background: #f8d4b4;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  margin-top: 10rem;
+  position: relative;
+  text-align: center;
+  height: 150px;
+}
+.about-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  margin-top: 3rem;
+  padding-top: 30px;
+}
+
+.legacy-section {
+  background: #000;
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+.legacy-section h2{
+  text-align: justify;
+  padding-bottom: 1rem ;
+  border-bottom: 2px solid white;
+}
+.legacy-section p{
+  text-align: justify;
+}
+
+.special-section {
+   text-align:left; 
+   padding: 3rem 0; 
+   color: #fff; 
+  }
+  .special-section h2{
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #fff;
+  }
+
+.menu-scroll {
+  background: #fff;
+  padding: 3rem 0;
+}
+.menu-cards {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.menu-card {
+  flex: 0 0 auto;
+  width: 200px;
+  background: var(--bg);
+  border-radius: 8px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  text-align: center;
+}
+.menu-card img { width: 100%; height: 140px; object-fit: cover; }
+
+.visit-section { text-align: center; padding: 3rem 0;color: #fff; }
+.visit-cards { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; color: #000; }
+.visit-card {
+  background:#f8d4b4;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  width: 500px;
+margin-bottom: 2rem;
+}
+.location-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.more-cafe {
+  position: relative;
+  /* background: url('/images/coffee-bg.png') center/cover no-repeat; */
+  color: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+/* .more-cafe .overlay {
+ background: rgba(0, 0, 0, 0.4);
+  padding: 4rem 0;
+} */
+
+.more-cafe {
+  background-color: #e6b98f; /* coffee beige */
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.more-cafe .container h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.more-cafe .container p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 700;
+  font-style: bold;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.visit-btn {
+  background: black;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.visit-btn:hover {
+  background: #333;
+}
+
+/* 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 0;
+  color: var(--muted);
+  flex-wrap: wrap;
+} */
+
+@media (max-width: 880px) {
+  .visit-cards { flex-direction: column; align-items: center; }
+  .menu-cards { gap: .5rem; }
+}

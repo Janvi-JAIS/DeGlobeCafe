@@ -9,8 +9,11 @@ import Story from "./pages/Story";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
+import Header from "./pages/Header";
 import Login from "./pages/Login";
 import ProtectedRoute from "./utils/ProtectedRoute";
+import OurStory from "./pages/OurStory";
+
 
 import Dashboard from "./admin/Dashboard";
 import MenuEditor from "./admin/MenuEditor";
@@ -21,15 +24,20 @@ import Inquiries from "./admin/Inquiries";
 const App = () => {
   return (
     <>
-      <Navbar />
+      
+      <Header/>
       <Routes>
+        
         <Route path="/" element={<Home />} />
+       
+        <Route path="/home" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/story" element={<Story />} />
+        <Route path="/ourstory" element={<OurStory />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+       
 
         <Route path="/admin" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
   <Route path="/admin/menu" element={<ProtectedRoute><MenuEditor /></ProtectedRoute>} />
