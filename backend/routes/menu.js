@@ -1,54 +1,86 @@
 import express from "express";
-import MenuItem from "../models/MenuItem.js";
 import multer from "multer";
-import path from "path";
-import fs from "fs";
+import MenuItem from "../models/MenuItem.js";
+import auth from "../middleware/authmiddleware.js";
 
 const router = express.Router();
 
-// Multer storage for image uploads
+// File upload config (for images)
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    const dir = "uploads/menu";
-    fs.mkdirSync(dir, { recursive: true });
-    cb(null, dir);
+  destination: function (req, file, cb) {
+    cb(null, "uploads/");
   },
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + path.extname(file.originalname));
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + "-" + file.originalname);
   }
 });
 const upload = multer({ storage });
 
-// GET all menu items
+// ---------------- CRUD ---------------- //
+
+// Create a new menu item (Admin only)
+router.post("/", auth, upload.single("image"), async (req, res) => {
+  try {
+    const { name, description, price, category, featured, available } = req.body;
+
+    const menuItem = new MenuItem({
+      name,
+      description,
+      price,
+      category,
+      featured,
+      available,
+      image: req.file ? `/uploads/${req.file.filename}` : null,
+    });
+
+    await menuItem.save();
+    res.json(menuItem);
+  } catch (err) {
+    res.status(500).json({ msg: err.message });
+  }
+});
+
+// Get all menu items (Public)
 router.get("/", async (req, res) => {
-  const items = await MenuItem.find().sort({ createdAt: -1 });
-  res.json(items);
+  try {
+    const items = await MenuItem.find().sort({ createdAt: -1 });
+    res.json(items);
+  } catch (err) {
+    res.status(500).json({ msg: err.message });
+  }
 });
 
-// POST create a new menu item
-router.post("/", upload.single("image"), async (req, res) => {
-  const { name, description, price, category, bestSeller } = req.body;
-  const image = req.file ? req.file.filename : "";
-  const item = new MenuItem({ name, description, price, category, bestSeller, image });
-  await item.save();
-  res.status(201).json(item);
+// Get single item (Public)
+router.get("/:id", async (req, res) => {
+  try {
+    const item = await MenuItem.findById(req.params.id);
+    res.json(item);
+  } catch (err) {
+    res.status(500).json({ msg: err.message });
+  }
 });
 
-// PUT update menu item
-router.put("/:id", upload.single("image"), async (req, res) => {
-  const { name, description, price, category, bestSeller } = req.body;
-  const updates = { name, description, price, category, bestSeller };
+// Update menu item (Admin only)
+router.put("/:id", auth, upload.single("image"), async (req, res) => {
+  try {
+    const updates = { ...req.body };
+    if (req.file) updates.image = `/uploads/${req.file.filename}`;
 
-  if (req.file) updates.image = req.file.filename;
-
-  const updatedItem = await MenuItem.findByIdAndUpdate(req.params.id, updates, { new: true });
-  res.json(updatedItem);
+    const item = await MenuItem.findByIdAndUpdate(req.params.id, updates, { new: true });
+    res.json(item);
+  } catch (err) {
+    res.status(500).json({ msg: err.message });
+  }
 });
 
-// DELETE menu item
-router.delete("/:id", async (req, res) => {
-  await MenuItem.findByIdAndDelete(req.params.id);
-  res.json({ message: "Deleted successfully" });
+// Delete menu item (Admin only)
+router.delete("/:id", auth, async (req, res) => {
+  try {
+    await MenuItem.findByIdAndDelete(req.params.id);
+    res.json({ msg: "Menu item deleted" });
+  } catch (err) {
+    res.status(500).json({ msg: err.message });
+  }
 });
 
 export default router;
